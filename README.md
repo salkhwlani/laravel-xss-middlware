@@ -65,7 +65,7 @@ The MIT License (MIT). Please see [License File](/LICENSE.md) for more informati
 [ico-styleCi]: https://styleci.io/repos/172194440/shield?branch=master&style=flat
 
 [link-packagist]: https://packagist.org/packages/alkhwlani/xss-middleware
-[link-travis]: https://travis-ci.org/alkhwlani/xss-middleware
+[link-travis]: https://travis-ci.org/yemenifree/laravel-xss-middlware
 [link-scrutinizer]: https://scrutinizer-ci.com/g/yemenifree/laravel-xss-middlware/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/yemenifree/laravel-xss-middlware
 [link-downloads]: https://packagist.org/packages/alkhwlani/xss-middleware
