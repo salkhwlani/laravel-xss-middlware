@@ -71,4 +71,4 @@ The MIT License (MIT). Please see [License File](/LICENSE.md) for more informati
 [link-downloads]: https://packagist.org/packages/alkhwlani/xss-middleware
 [link-author]: https://github.com/yemenifree
 [link-contributors]: ../../contributors
-[link-styleCi]: https://styleci.io/repos/105763061
+[link-styleCi]: https://styleci.io/repos/172194440
