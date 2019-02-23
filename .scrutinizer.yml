@@ -1,0 +1,11 @@
+filter:
+  excluded_paths: [tests/*]
+
+build:
+  tests:
+    override:
+      - command: 'vendor/bin/phpunit --coverage-clover clover.xml; if [ "$?" -gt "2" ]; then exit 1; fi'
+        coverage:
+          file: clover.xml
+          format: php-clover
+        idle_timeout: 1800
