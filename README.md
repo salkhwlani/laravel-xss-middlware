@@ -1,7 +1,5 @@
 # A XSS middleware for Laravel
 
-A Laravel middleware to cleaning all inputs/data of request from XSS and embed elements, its used [Security Core](https://github.com/GrahamCampbell/Security-Core) by [Graham Campbell](https://github.com/GrahamCampbell) under the hook. 
-
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
@@ -10,7 +8,10 @@ A Laravel middleware to cleaning all inputs/data of request from XSS and embed e
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
+A Laravel middleware to cleaning all inputs/data of request from XSS and embed elements, its used [Security Core](https://github.com/GrahamCampbell/Security-Core) package by [Graham Campbell](https://github.com/GrahamCampbell) under the hook. 
+
 ## Install
+
 `composer require alkhwlani/xss-middleware`
 
 ## Usage
@@ -61,7 +62,7 @@ The MIT License (MIT). Please see [License File](/LICENSE.md) for more informati
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/alkhwlani/xss-middleware.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/alkhwlani/xss-middleware.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/alkhwlani/xss-middleware.svg?style=flat-square
-[ico-styleCi]: https://styleci.io/repos/105763061/shield?branch=master&style=flat
+[ico-styleCi]: https://styleci.io/repos/172194440/shield?branch=master&style=flat
 
 [link-packagist]: https://packagist.org/packages/alkhwlani/xss-middleware
 [link-travis]: https://travis-ci.org/alkhwlani/xss-middleware
