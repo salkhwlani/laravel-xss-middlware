@@ -2,8 +2,8 @@
 
 namespace Alkhwlani\XssMiddleware;
 
-use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Arr;
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider as ServiceProviderAlias;
 
 class ServiceProvider extends ServiceProviderAlias
@@ -59,10 +59,10 @@ class ServiceProvider extends ServiceProviderAlias
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/xss-middleware.php' => config_path('xss-middleware.php'),
+                __DIR__.'/../config/xss-middleware.php' => config_path('xss-middleware.php'),
             ], 'config');
         }
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/xss-middleware.php', 'xss-middleware');
+        $this->mergeConfigFrom(__DIR__.'/../config/xss-middleware.php', 'xss-middleware');
     }
 }

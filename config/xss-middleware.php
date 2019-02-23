@@ -13,7 +13,7 @@ return [
      */
     'auto_register_middleware' => true,
 
-    /**
+    /*
      * The middleware will used to filter xss
      */
     'middleware'               => \Alkhwlani\XssMiddleware\XSSFilterMiddleware::class,

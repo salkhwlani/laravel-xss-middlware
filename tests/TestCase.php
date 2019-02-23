@@ -2,9 +2,9 @@
 
 namespace Alkhwlani\XssMiddleware\Tests;
 
-use Alkhwlani\XssMiddleware\ServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Routing\RouteCollection;
+use Alkhwlani\XssMiddleware\ServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
@@ -13,14 +13,14 @@ class TestCase extends BaseTestCase
         'username' => '<a onclick="">test xss</a>',
         'deep-array' => [
             'username' => '<a onclick="">test xss</a>',
-        ]
+        ],
     ];
 
     protected $cleanData = [
         'username' => '<a xss=removed>test xss</a>',
         'deep-array' => [
             'username' => '<a xss=removed>test xss</a>',
-        ]
+        ],
     ];
 
     public function setUp(): void
@@ -29,7 +29,7 @@ class TestCase extends BaseTestCase
         $this->withoutExceptionHandling();
         $this->artisan('migrate', ['--database' => 'testing']);
         $this->loadLaravelMigrations(['--database' => 'testing']);
-        $this->withFactories(__DIR__ . '/../src/database/factories');
+        $this->withFactories(__DIR__.'/../src/database/factories');
         $this->setUpRoutes();
     }
 
