@@ -58,16 +58,16 @@ The MIT License (MIT). Please see [License File](/LICENSE.md) for more informati
 
 [ico-version]: https://img.shields.io/packagist/v/alkhwlani/xss-middleware.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/alkhwlani/xss-middleware/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/alkhwlani/xss-middleware.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/alkhwlani/xss-middleware.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/yemenifree/xss-middleware/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/yemenifree/xss-middleware.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/yemenifree/xss-middleware.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/alkhwlani/xss-middleware.svg?style=flat-square
 [ico-styleCi]: https://styleci.io/repos/172194440/shield?branch=master&style=flat
 
 [link-packagist]: https://packagist.org/packages/alkhwlani/xss-middleware
 [link-travis]: https://travis-ci.org/alkhwlani/xss-middleware
-[link-scrutinizer]: https://scrutinizer-ci.com/g/alkhwlani/xss-middleware/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/alkhwlani/xss-middleware
+[link-scrutinizer]: https://scrutinizer-ci.com/g/yemenifree/xss-middleware/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/yemenifree/xss-middleware
 [link-downloads]: https://packagist.org/packages/alkhwlani/xss-middleware
 [link-author]: https://github.com/yemenifree
 [link-contributors]: ../../contributors
