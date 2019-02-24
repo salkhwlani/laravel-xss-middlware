@@ -15,7 +15,7 @@ class XSSFilterMiddleware extends TransformsRequest
     /**
      * @var \GrahamCampbell\SecurityCore\Security
      */
-    private $security;
+    protected $security;
 
     public function __construct(Repository $config)
     {
@@ -33,10 +33,22 @@ class XSSFilterMiddleware extends TransformsRequest
      */
     protected function transform($key, $value)
     {
-        if (! is_string($value) || in_array($key, $this->config['except'], true)) {
+        if ($this->shouldIgnore($key, $value)) {
             return $value;
         }
 
         return $this->security->clean($value);
+    }
+
+    /**
+     * determine if should ignore the field.
+     *
+     * @param $key
+     * @param $value
+     * @return bool
+     */
+    protected function shouldIgnore($key, $value): bool
+    {
+        return ! is_string($value) || in_array($key, $this->config['except'], true);
     }
 }
