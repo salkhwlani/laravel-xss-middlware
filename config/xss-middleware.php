@@ -17,4 +17,6 @@ return [
      * The middleware will used to filter xss
      */
     'middleware'               => \Alkhwlani\XssMiddleware\XSSFilterMiddleware::class,
+
+    'except' => []
 ];
