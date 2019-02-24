@@ -18,5 +18,5 @@ return [
      */
     'middleware'               => \Alkhwlani\XssMiddleware\XSSFilterMiddleware::class,
 
-    'except' => []
+    'except' => [],
 ];
