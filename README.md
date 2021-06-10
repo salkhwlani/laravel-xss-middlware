@@ -10,6 +10,13 @@
 
 A Laravel middleware to cleaning all inputs/data of request from XSS and embed elements, its used [Security Core](https://github.com/GrahamCampbell/Security-Core) package by [Graham Campbell](https://github.com/GrahamCampbell) under the hook. 
 
+## Support version
+
+| **Laravel**  |  **laravel-modules** |
+|---|---|
+| 5.8  | ^1.0  |
+| 7.X-8.X  | ^2.0  |
+
 ## Install
 
 `composer require alkhwlani/xss-middleware`
