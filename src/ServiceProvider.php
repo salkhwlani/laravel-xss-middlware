@@ -2,8 +2,8 @@
 
 namespace Alkhwlani\XssMiddleware;
 
-use Illuminate\Support\Arr;
 use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider as ServiceProviderAlias;
 
 class ServiceProvider extends ServiceProviderAlias

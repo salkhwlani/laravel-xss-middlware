@@ -2,9 +2,9 @@
 
 namespace Alkhwlani\XssMiddleware\Tests;
 
+use Alkhwlani\XssMiddleware\ServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Routing\RouteCollection;
-use Alkhwlani\XssMiddleware\ServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
