@@ -17,9 +17,9 @@ class TestCase extends BaseTestCase
     ];
 
     protected $cleanData = [
-        'username' => '<a xss=removed>test xss</a>',
+        'username' => '<a >test xss</a>',
         'deep-array' => [
-            'username' => '<a xss=removed>test xss</a>',
+            'username' => '<a >test xss</a>',
         ],
     ];
 
