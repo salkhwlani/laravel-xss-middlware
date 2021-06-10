@@ -15,7 +15,7 @@ A Laravel middleware to cleaning all inputs/data of request from XSS and embed e
 | **Laravel**  |  **laravel-modules** |
 |---|---|
 | 5.8  | ^1.0  |
-| 7.X-8.X  | ^2.0  |
+| 6.X-8.X  | ^2.0  |
 
 ## Install
 
