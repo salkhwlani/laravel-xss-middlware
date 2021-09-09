@@ -15,6 +15,7 @@ class ServiceProvider extends ServiceProviderAlias
      */
     public function boot()
     {
+        $this->registerConfig();
         $this->registerMiddleware();
     }
 
@@ -43,16 +44,6 @@ class ServiceProvider extends ServiceProviderAlias
         foreach (Arr::wrap($registerType) as $group) {
             $this->app['router']->pushMiddlewareToGroup($group, $middlewareClass);
         }
-    }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->registerConfig();
     }
 
     public function registerConfig()
