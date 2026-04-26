@@ -1,6 +1,6 @@
 # Upgrade guide
 
-## From v4 to v5
+## From v4 to v4.1
 
 ### Backend swap
 
