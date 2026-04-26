@@ -32,12 +32,50 @@ class EvilOptionsTest extends TestCase
         $this->assertStringContainsString('safe', $response);
     }
 
+    #[Test]
+    public function it_strips_str_afterwards_substrings_when_configured()
+    {
+        $payload = ['snippet' => 'hello SECRET_TOKEN world'];
+
+        $response = $this->post('add-middleware-auto', $payload)->json('snippet');
+
+        $this->assertStringNotContainsString('SECRET_TOKEN', $response);
+        $this->assertStringContainsString('world', $response);
+    }
+
+    #[Test]
+    public function it_strips_custom_event_handlers_when_configured()
+    {
+        $payload = ['snippet' => '<a onmycustom="alert(1)">x</a>'];
+
+        $response = $this->post('add-middleware-auto', $payload)->json('snippet');
+
+        $this->assertStringNotContainsString('onmycustom', $response);
+    }
+
+    #[Test]
+    public function flat_evil_array_still_works_for_old_published_configs()
+    {
+        // Old graham-campbell shape: bare list of attribute names. Routed onto
+        // addEvilAttributes() with a deprecation notice.
+        $this->app['config']->set('xss-middleware.evil', ['data-evil']);
+
+        $payload = ['snippet' => '<p data-evil="x">hi</p>'];
+
+        $response = @$this->post('add-middleware-auto', $payload)->json('snippet');
+
+        $this->assertStringNotContainsString('data-evil=', $response);
+        $this->assertStringContainsString('hi', $response);
+    }
+
     protected function getEnvironmentSetUp($app)
     {
         parent::getEnvironmentSetUp($app);
         $app['config']->set('xss-middleware.evil', [
             'attributes' => ['style'],
             'tags' => ['svg'],
+            'events' => ['onmycustom'],
+            'strAfterwards' => ['SECRET_TOKEN'],
         ]);
     }
 }

@@ -28,16 +28,19 @@ return [
 
     /*
      |--------------------------------------------------------------------------
-     | Evil attributes / tags
+     | Evil options
      |--------------------------------------------------------------------------
      |
-     | Additional HTML attributes and tags that should always be stripped from
-     | the input, on top of voku/anti-xss's built-in evil list. Set to null to
-     | use only the defaults.
+     | Custom evil patterns to strip on top of voku/anti-xss's built-in list.
+     | All sub-keys are optional; set to null or omit to skip.
      |
      |     'evil' => [
-     |         'attributes' => ['style', 'srcdoc'],
-     |         'tags'       => ['svg', 'math'],
+     |         'attributes'         => ['style', 'srcdoc'],   // addEvilAttributes
+     |         'tags'               => ['svg', 'math'],        // addEvilHtmlTags
+     |         'regex'              => ['/foo[0-9]+/'],        // addNeverAllowedRegex
+     |         'events'             => ['onmycustom'],         // addNeverAllowedOnEventsAfterwards
+     |         'strAfterwards'      => ['SECRET'],             // addNeverAllowedStrAfterwards
+     |         'doNotCloseHtmlTags' => ['br', 'hr'],           // addDoNotCloseHtmlTags
      |     ],
      */
     'evil' => [

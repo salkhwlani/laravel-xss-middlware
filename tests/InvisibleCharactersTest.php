@@ -38,4 +38,18 @@ class InvisibleCharactersTest extends TestCase
         $this->post('add-middleware-auto', $payload)
             ->assertJson(['snippet' => "line1\nline2\tindented\r\nline3"]);
     }
+
+    #[Test]
+    public function it_re_runs_xss_clean_when_invisible_strip_changes_the_string()
+    {
+        // Hide an event handler behind a C0 byte. Plain xss_clean wouldn't
+        // detect it because the bytes break the attribute parser, but after
+        // stripping invisibles a second xss_clean pass catches it.
+        $payload = ['snippet' => '<a on'."\x01".'click="alert(1)">x</a>'];
+
+        $response = $this->post('add-middleware-auto', $payload)->json('snippet');
+
+        $this->assertStringNotContainsString('alert', $response);
+        $this->assertStringNotContainsString("\x01", $response);
+    }
 }
