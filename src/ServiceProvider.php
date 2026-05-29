@@ -58,6 +58,10 @@ class ServiceProvider extends ServiceProviderAlias
     {
         $middlewareClass = $this->app['config']->get('xss-middleware.middleware', XSSFilterMiddleware::class);
 
+        if (! is_string($middlewareClass) || ! class_exists($middlewareClass)) {
+            $middlewareClass = XSSFilterMiddleware::class;
+        }
+
         $this->app['router']->aliasMiddleware('xss-filter', $middlewareClass);
 
         $registerType = $this->app['config']->get('xss-middleware.auto_register_middleware', false);
