@@ -44,6 +44,6 @@ class XSSFilterMiddleware extends TransformsRequest
      */
     protected function shouldIgnore($key, $value): bool
     {
-        return ! is_string($value) || in_array($key, $this->config['except'], true);
+        return ! is_string($value) || in_array($key, $this->config['except'] ?? [], true);
     }
 }

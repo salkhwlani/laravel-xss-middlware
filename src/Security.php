@@ -39,7 +39,7 @@ class Security
 
         // Re-clean only if invisible-character stripping mutated the value
         // — a payload may have been concealed behind C0 control bytes.
-        return $stripped == $output ? $output : $this->antiXss->xss_clean($stripped);
+        return $stripped === $output ? $output : $this->antiXss->xss_clean($stripped);
     }
 
     /**
